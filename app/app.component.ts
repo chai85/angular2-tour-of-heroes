@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
 
     public heroes: Hero[];
     getHeroes() {
-        this._heroService.getHeroes().then(heroes => this.heroes = heroes);
+        this._heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
     }
 
     onSelect(hero: Hero) { this.selectedHero = hero; }
